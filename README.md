@@ -34,7 +34,7 @@ flowchart LR
 - [ ] SVN (Solana)
 - [ ] Antelope (Vaulta, WAX, Telos, Ultra)
 
-### Quick start
+## Quick start
 
 Install [Bun](https://bun.sh/)
 
@@ -94,8 +94,7 @@ docker pull ghcr.io/graphprotocol/token-api:develop
 ```bash
 docker build \
   --build-arg GIT_COMMIT="$(git rev-parse HEAD)" \
-  --build-arg GIT_DATE="$(git log -1 --format=%cd --date=short)" \
-  --build-arg GIT_VERSION="$(git describe --tags --abbrev=0)" \
+  --build-arg GIT_DATE="$(git log -1 --format=%cd --date=short)"
   -t token-api .
 ```
 
@@ -108,3 +107,4 @@ docker run -it --rm --env-file .env -p 8000:8000 ghcr.io/graphprotocol/token-api
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
