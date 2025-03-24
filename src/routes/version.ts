@@ -10,6 +10,7 @@ const responseSchema = z.object({
     version: z.string(),
     date: z.string(),
     commit: z.string(),
+    repo: z.string(),
 });
 
 const openapi = describeRoute({

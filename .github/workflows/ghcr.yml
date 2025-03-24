@@ -47,8 +47,8 @@ jobs:
                   push: true
                   tags: ${{ steps.meta.outputs.tags }}
                   labels: ${{ steps.meta.outputs.labels }}
-                  # Pass github.sha to Docker as GIT_COMMIT & GIT_DATE
                   build-args: |
                     GIT_COMMIT=${{ github.sha }}
+                    GIT_REPOSITORY=${{ github.repository }}
                     GIT_DATE=${{ env.GIT_DATE }}
                     GIT_VERSION=${{ env.GIT_VERSION }}
